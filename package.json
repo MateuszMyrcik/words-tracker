@@ -19,7 +19,9 @@
     }
   ],
   "dependencies": {
-    "@raycast/api": "^1.69.0"
+    "@raycast/api": "^1.69.0",
+    "google-auth-library": "^9.15.0",
+    "google-spreadsheet": "^4.1.4"
   },
   "devDependencies": {
     "@raycast/eslint-config": "^1.0.6",
@@ -35,5 +37,35 @@
     "fix-lint": "ray lint --fix",
     "lint": "ray lint",
     "publish": "npx @raycast/api@latest publish"
-  }
+  },
+  "preferences": [
+    {
+      "name": "spreadsheetId",
+      "type": "textfield",
+      "required": true,
+      "title": "Google Spreadsheet ID",
+      "description": "The ID of your Google Spreadsheet (from the URL)"
+    },
+    {
+      "name": "sheetId",
+      "type": "textfield",
+      "required": true,
+      "title": "Sheet ID",
+      "description": "The ID of the specific sheet within the spreadsheet"
+    },
+    {
+      "name": "clientEmail",
+      "type": "textfield",
+      "required": true,
+      "title": "Service Account Email",
+      "description": "Email address of your Google Cloud service account"
+    },
+    {
+      "name": "privateKey",
+      "type": "password",
+      "required": true,
+      "title": "Private Key",
+      "description": "Private key from your Google Cloud service account"
+    }
+  ]
 }
